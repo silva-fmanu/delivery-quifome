@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #8C031C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.amarelo{
+    color: #FFE75F;
+}
+
+.botao-login{
+    display: flex;
+    margin: 0 auto;
+}
