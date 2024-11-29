@@ -8,7 +8,7 @@ import StarFill from '../../assets/StarFill.png';
 import Cabecalho from '../../components/cabecalho';
 import restauranteLogo from '../../assets/restauranteLogo.png'; 
 import Perfil from '../Perfil';
-import {Link} from "react-router-dom";
+import {Link} from "react-router-dom"
 
 function Home() {
     return (
