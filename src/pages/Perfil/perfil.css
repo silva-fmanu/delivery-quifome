@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-perfil {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column; 
+    margin: 0 auto;
+    height: 100vh; 
+    width: 100vw;
+}
+
+.nomeUser{
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bem-vindo {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    line-height: 1.5; 
+    height: 80%;
+}
+
+.saldo{
+    font-size: 1.5rem;
+}
+
+.saldoUser{
+    font-size: 3rem;
+}
+
+.credito{
+    margin-top: 0.5em;
+    color: #FFE75F;
+    background-color: #8C031C;
+    padding: 0.5em;
+    border-radius: 10px;
+    border-style: none;
+}
