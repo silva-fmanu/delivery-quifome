@@ -4,6 +4,38 @@
     box-sizing: border-box;
 }
 
+.FoodsContainer{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 20px;
+    height: fit-content;
+}
+
+.food-item{
+    width: 18rem;
+    height: 100%;
+}
+
+.item-body{
+    padding: 10px 5px;
+    height: 100%;
+}
+
+.nota{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RestaurantsContainer{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 20px;
+    height: fit-content;
+}
+
 .body-home {
     background-color: rgb(255, 255, 255);
     display: flex;
