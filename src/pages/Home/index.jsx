@@ -3,11 +3,7 @@ import "./home.css";
 import iconeHome from "../../assets/iconeHome.png";
 import profileFosco from "../../assets/profileFosco.png";
 import banner from "../../assets/banner.png";
-import Hamburger from "../../assets/Hamburger.jpg";
-import StarFill from "../../assets/StarFill.png";
 import Cabecalho from "../../components/cabecalho";
-import restauranteLogo from "../../assets/restauranteLogo.png";
-import Perfil from "../Perfil";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
 
@@ -32,7 +28,7 @@ function Home() {
   };
 
   return (
-    <div className="body-home mb-5">
+    <div className="body-home my-5">
       <Cabecalho />
       <div className="banner">
         <img className="bannerImage" src={banner} alt="banner de promoção" />
@@ -40,40 +36,45 @@ function Home() {
       <div className="foodsList">
         <div className="sectionTitle">
           <h3 className="title">Comidas Para Você</h3>
-          <a href="#" className="seeMore">
+          <Link className="seeMore" to="/delivery-quifome/comidas">
             Ver mais
-          </a>
+          </Link>
         </div>
         <div className="FoodsContainer px-3 my-2">
           {comidas.map((comida) => (
-            <div className="food-item">
-              <img
-                src={comida.image}
-                className="card-img-top"
-                alt={comida.name}
-              />
-              <div className="item-body">
-                <h5 className="card-title">{comida.name}</h5>
-                <p className="card-text">R${comida.price}</p>
-                <p>{comida.rating}</p>
+            <Link to="">
+              <div key={comida.id} className="food-item">
+                <div
+                  className="food-image"
+                  style={{ backgroundImage: `url(${comida.image})` }}
+                ></div>
+                <div className="item-body">
+                  <h5 className="card-title">{comida.name}</h5>
+                  <p className="card-text">R${comida.price}</p>
+                  <p>{comida.rating}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
       <div className="restaurantsList">
         <div className="sectionTitle">
           <h3 className="title">Restaurantes</h3>
-          <a href="#" className="seeMore">
+          <Link className="seeMore" to="/delivery-quifome/restaurantes">
             Ver mais
-          </a>
+          </Link>
         </div>
         <div className="RestaurantsContainer px-3 my-2">
           {restaurantes.map((restaurante) => (
-            <div style={{width: "18rem"}}>
-              <img src={restaurante.image} className="card-img-top" alt={restaurante.name} />
-              <div className="card-body">
-                <p className="card-text">{restaurante.name}</p>
+            <div key={restaurante.id} className="food-item">
+              <div
+                className="food-image"
+                style={{ backgroundImage: `url(${restaurante.image})` }}
+              ></div>
+              <div className="item-body">
+                <h5 className="card-title">{restaurante.name}</h5>
+                <p>{restaurante.rating}</p>
               </div>
             </div>
           ))}

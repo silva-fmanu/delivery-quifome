@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Cabecalho from "../../components/cabecalho";
 import "./perfil.css";
 import HomeFosco from '../../assets/HomeFosco.png';
 import iconeProfile from '../../assets/iconeProfile.png';
 import {Link} from "react-router-dom";
-import StarFill from '../../assets/StarFill.png';
 
 function Perfil(){
+
+    const [user, setUser] = useState("");
+
+    useEffect(() => {
+        getData();
+    }, [])
+
+    const getData = () => {
+        let usuario = sessionStorage.getItem("sessao");
+        usuario = JSON.parse(usuario);
+        setUser(usuario);
+    }
+
     return(
         <div className="body-perfil">
             <Cabecalho/>
             <div className="bem-vindo">
-                <h1 className="nomeUser">Olá, Gabriela Souza</h1>
-                <p className="saldo">Seu saldo atual:</p>
-                <h3 className="saldoUser">$9.99</h3>
+                <h1 className="nomeUser">Olá, {user.name}</h1>
+                <p className="saldo">Seu saldo atual: {user.saldo}</p>
+                <h3 className="saldoUser">$</h3>
                 <button className="credito">
                     Colocar mais crédito
                 </button>
