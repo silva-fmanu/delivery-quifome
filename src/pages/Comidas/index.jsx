@@ -5,6 +5,7 @@ import HomeFosco from "../../assets/Homefosco.png";
 import profileFosco from "../../assets/profileFosco.png";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
+import Star from "../../assets/StarFill.png";
 
 function Comidas() {
   const [comidas, setComidas] = useState([]);
@@ -36,7 +37,10 @@ function Comidas() {
             <div className="item-body">
               <h5 className="card-title">{comida.name}</h5>
               <p className="card-text">R${comida.price}</p>
-              <p>{comida.rating}</p>
+              <div className="rating">
+                  <img src={Star} alt="" className="starImg"/>
+                  <p className="card-text">{comida.rating}</p>
+              </div>
             </div>
           </div>
         ))}

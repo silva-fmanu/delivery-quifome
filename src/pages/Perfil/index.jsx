@@ -24,8 +24,8 @@ function Perfil(){
             <Cabecalho/>
             <div className="bem-vindo">
                 <h1 className="nomeUser">Olá, {user.name}</h1>
-                <p className="saldo">Seu saldo atual: {user.saldo}</p>
-                <h3 className="saldoUser">$</h3>
+                <p className="saldo">Seu saldo atual:</p>
+                <h3 className="saldoUser">${user.saldo}</h3>
                 <button className="credito">
                     Colocar mais crédito
                 </button>

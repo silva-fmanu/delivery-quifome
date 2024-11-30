@@ -5,6 +5,7 @@ import HomeFosco from "../../assets/Homefosco.png";
 import profileFosco from "../../assets/profileFosco.png";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
+import Star from "../../assets/StarFill.png";
 
 function Restaurantes() {
 
@@ -37,7 +38,10 @@ function Restaurantes() {
             <div className="item-body">
               <h5 className="card-title">{restaurante.name}</h5>
               <p className="card-text">R${restaurante.price}</p>
-              <p>{restaurante.rating}</p>
+              <div className="rating">
+                  <img src={Star} alt="" className="starImg"/>
+                  <p className="card-text">{restaurante.rating}</p>
+              </div>
             </div>
           </div>
         ))}
