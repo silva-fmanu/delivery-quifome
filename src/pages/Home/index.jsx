@@ -6,6 +6,7 @@ import banner from "../../assets/banner.png";
 import Cabecalho from "../../components/cabecalho";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
+import Star from "../../assets/StarFill.png";
 
 function Home() {
   const [comidas, setComidas] = useState([]);
@@ -51,7 +52,10 @@ function Home() {
                 <div className="item-body">
                   <h5 className="card-title">{comida.name}</h5>
                   <p className="card-text">R${comida.price}</p>
-                  <p>{comida.rating}</p>
+                  <div className="rating">
+                            <img src={Star} alt="" className="starImg"/>
+                            <p className="card-text">{comida.rating}</p>
+                  </div>
                 </div>
               </div>
             </Link>
@@ -74,7 +78,10 @@ function Home() {
               ></div>
               <div className="item-body">
                 <h5 className="card-title">{restaurante.name}</h5>
-                <p>{restaurante.rating}</p>
+                <div className="rating">
+                            <img src={Star} alt="" className="starImg"/>
+                            <p className="card-text">{restaurante.rating}</p>
+                  </div>
               </div>
             </div>
           ))}
