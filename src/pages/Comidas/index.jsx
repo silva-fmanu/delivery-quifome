@@ -28,22 +28,24 @@ function Comidas() {
       <Cabecalho />
 
       <div className="food-container">
-        {comidas.map((comida) => (
-          <div key={comida.id} className="food-item">
-            <div
-              className="food-image"
-              style={{ backgroundImage: `url(${comida.image})` }}
-            ></div>
-            <div className="item-body">
-              <h5 className="card-title">{comida.name}</h5>
-              <p className="card-text">R${comida.price}</p>
-              <div className="rating">
-                  <img src={Star} alt="" className="starImg"/>
-                  <p className="card-text">{comida.rating}</p>
+      {comidas.map((comida) => (
+            <Link to={`/delivery-quifome/comida/${comida.id}`}>
+              <div key={comida.id} className="food-item">
+                <div
+                  className="food-image"
+                  style={{ backgroundImage: `url(${comida.image})` }}
+                ></div>
+                <div className="item-body">
+                  <h5 className="card-title">{comida.name}</h5>
+                  <p className="card-text">R${comida.price}</p>
+                  <div className="rating">
+                    <img src={Star} alt="" className="starImg" />
+                    <p className="card-text">{comida.rating}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
+            </Link>
+          ))}
       </div>
 
       <div className="tabs">

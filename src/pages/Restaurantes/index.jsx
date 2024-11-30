@@ -29,22 +29,23 @@ function Restaurantes() {
       <Cabecalho />
 
       <div className="restaurant-container">
-        {restaurantes.map((restaurante) => (
-          <div key={restaurante.id} className="food-item">
-            <div
-              className="food-image"
-              style={{ backgroundImage: `url(${restaurante.image})` }}
-            ></div>
-            <div className="item-body">
-              <h5 className="card-title">{restaurante.name}</h5>
-              <p className="card-text">R${restaurante.price}</p>
-              <div className="rating">
-                  <img src={Star} alt="" className="starImg"/>
-                  <p className="card-text">{restaurante.rating}</p>
+      {restaurantes.map((restaurante) => (
+            <Link to={`/delivery-quifome/restaurante/${restaurante.id}`}>
+              <div key={restaurante.id} className="food-item">
+                <div
+                  className="food-image"
+                  style={{ backgroundImage: `url(${restaurante.image})` }}
+                ></div>
+                <div className="item-body">
+                  <h5 className="card-title">{restaurante.name}</h5>
+                  <div className="rating">
+                    <img src={Star} alt="" className="starImg" />
+                    <p className="card-text">{restaurante.rating}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
+            </Link>
+          ))}
       </div>
 
       <div className="tabs">
