@@ -4,11 +4,61 @@
     box-sizing: border-box;
 }
 
-.body-comida {
+.body-all {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column; 
-    margin: 0 auto;
     height: 100vh; 
     width: 100vw;
+}
+
+.body-comida{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.card-comida{
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card{
+    justify-content: center;
+}
+
+
+.btnComprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    background-color: #8C031C;
+    color: #FFE75F;
+}
+
+
+.btnComprar:hover {
+    background-color: #8C031C;
+}
+
+.imgComida{
+    border-radius: 20px;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+}
+
+.starImg{
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
 }
