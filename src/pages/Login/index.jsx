@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logoRed.png";
 import "./login.css";
 import api from "../../services/api";
 import { useNavigate } from "react-router-dom";
