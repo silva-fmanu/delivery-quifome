@@ -42,7 +42,6 @@ function Comida(){
                             <img src={Star} alt="" className="starImg"/>
                             <p className="card-text">4,5</p>
                         </div>
-                        
                         <a href="#" className="btn btn-primary btnComprar">Comprar</a>
                     </div>
                 </div>    

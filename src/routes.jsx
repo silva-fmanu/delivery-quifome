@@ -17,7 +17,7 @@ function RoutesApp() {
                 <Route path="/delivery-quifome/comidas" element={<Comidas/>}/>
                 <Route path="/delivery-quifome/comida" element={<Comida/>}/>
                 <Route path="/delivery-quifome/restaurantes" element={<Restaurantes/>}/>
-                <Route path="/delivery-quifome/restaurante/:RestauranteId" element={<Restaurante/>}/>
+                <Route path="/delivery-quifome/restaurante" element={<Restaurante/>}/>
             </Routes>
         </BrowserRouter>
     )
